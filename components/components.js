@@ -10,3 +10,6 @@ export {SearchBar, ProductCard, LogIn, Register } from './Widgets/widgets';
 
 /* seo head tag */
 export {default as HeadTag} from './HeadTag/HeadTag';
+
+/* layout */
+export {default as Layout} from './Layout/Layout';

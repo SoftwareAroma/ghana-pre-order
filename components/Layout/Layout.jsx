@@ -1,7 +1,7 @@
 import React from 'react';
-import { Footer, Header, SideBar } from '../components/components';
-import {useStateValue} from '../Provider/StateProvider';
-import actionTypes from '../Utils/Utils';
+import { Footer, Header, SideBar } from '../components';
+import {useStateValue} from '../../Provider/StateProvider';
+import actionTypes from '../../Utils/Utils';
 
 const Layout = (props) => {
     /* props */

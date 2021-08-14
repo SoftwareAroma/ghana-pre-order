@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../Provider/Theme';
-import Layout from '../Layout/Layout';
+import {Layout} from '../components/components';
 import {StateProvider} from '../Provider/StateProvider';
 import reducer, {initialState} from '../Provider/Reducer';
 import {HeadTag} from "../components/components";
