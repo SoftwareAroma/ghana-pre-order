@@ -2,8 +2,6 @@ import React, {useState} from "react";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import {IconButton, InputAdornment} from "@material-ui/core";
@@ -14,30 +12,32 @@ import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Box from "@material-ui/core/Box";
 import {CopyRight} from '../widgets';
-import {SignInStyles} from "./LogInStyles";
+import {SignUpStyles} from "./RegisterStyles";
+
+const initialValues = {
+    name : "",
+    password: "",
+    confirmPassword: "",
+    email: "",
+}
 
 
-const LogIn = () => {
-    const styles = SignInStyles();
+const Register = () => {
+    const styles = SignUpStyles();
+    const [values, setValues] = useState(initialValues);
     const [passwordVisible, setPasswordVisible] = useState(false);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [emailError, setEmailError] = useState("");
-    const [passwordError, setPasswordError] = useState("");
+    const [errors, setErrors] = useState({});
 
-    /* on email change */
-    const handleOnEmailChange = (event) => {
+    /* handle on value change */
+    const handleValueChange = (event) => {
         event.preventDefault();
-        setEmail(event.target.value);
+        const { name, value } = event.target;
+        setValues({
+            ...values,
+            [name]: value,
+        });
     }
 
-    /* on password change */
-    const handleOnPasswordChange = (event) => {
-        event.preventDefault();
-        setPassword(event.target.value);
-    }
-
-    /* handle password visibility */
     const handlePasswordVisible = (event) => {
         event.preventDefault();
         setPasswordVisible(!passwordVisible);
@@ -47,23 +47,30 @@ const LogIn = () => {
         event.preventDefault();
     }
 
+    const validateForm = (fieldValues = values) => {
+        let temp = { ...errors };
+        if ('password' in fieldValues) {
+            temp.password = fieldValues.password ? "" : "Invalid Password";
+        }
+
+        if ('emailAddress' in fieldValues) {
+            temp.emailAddress = fieldValues.emailAddress ? "" : "This Field is Required";
+        }
+
+        setErrors({
+            ...temp
+        });
+
+        if (fieldValues === values) {
+            return Object.values(temp).every(x => x === "");
+        }
+    }
+
     const handleOnSubmit = (event) => {
         event.preventDefault();
-        if (password.length >= 6) {
-            setPasswordError("");
-        } else {
-            setPasswordError("Invalid Password");
-            return;
+        if(validateForm()){
+            logInUser();
         }
-
-        if (email.includes("@") && email.endsWith(".com")) {
-            setEmailError("");
-        }else{
-            setEmailError("This Field is Required");
-            return;
-        }
-
-        logInUser();
     }
 
     return (
@@ -84,12 +91,12 @@ const LogIn = () => {
                             id="email"
                             label="Email Address"
                             name="email"
-                            value={email}
-                            onChange={handleOnEmailChange}
+                            value={values.email}
+                            onChange={handleValueChange}
                             autoComplete="email"
                             autoFocus
-                            error={!!emailError}
-                            helperText={emailError}
+                            error={!!errors.emailAddress}
+                            helperText={errors.emailAddress}
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
@@ -104,14 +111,14 @@ const LogIn = () => {
                             required
                             fullWidth
                             name="password"
-                            value={password}
-                            onChange={handleOnPasswordChange}
+                            value={values.password}
+                            onChange={handleValueChange}
                             label="Password"
                             type={passwordVisible ? "text" : "password"}
                             id="password"
                             autoComplete="current-password"
-                            error={!!passwordError}
-                            helperText={passwordError}
+                            error={!!errors.password}
+                            helperText={errors.password}
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
@@ -130,10 +137,6 @@ const LogIn = () => {
                                 ),
                             }}
                         />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
                         <Button
                             type="submit"
                             fullWidth
@@ -141,17 +144,12 @@ const LogIn = () => {
                             color="primary"
                             className={styles.submit}
                         >
-                            Sign In
+                            Sign Up
                         </Button>
                         <Grid container>
-                            <Grid item xs>
-                                <Link href="/auth/forgot" variant="body2">
-                                    Forgot password?
-                                </Link>
-                            </Grid>
                             <Grid item>
-                                <Link href="/auth/signup" variant="body2">
-                                    <a>Don&apos;t have an account? Sign Up</a>
+                                <Link href="/auth" variant="body2">
+                                    <a>Already have an account? Sign In</a>
                                 </Link>
                             </Grid>
                         </Grid>
@@ -165,4 +163,4 @@ const LogIn = () => {
     );
 }
 
-export default LogIn;
+export default Register;

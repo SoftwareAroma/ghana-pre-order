@@ -1,14 +1,15 @@
 import React from 'react';
+import {Register} from "../../components/components";
 
-const Register = () => {
+const SignUp = () => {
     return(
         <>
             {/* log in content */}
             <main>
-
+                <Register />
             </main>
         </>
     );
 }
 
-export default Register;
+export default SignUp;
