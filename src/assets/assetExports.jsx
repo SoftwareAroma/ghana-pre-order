@@ -1,0 +1,1 @@
+export {default as ClassicImage} from './images/classic.jpg';
