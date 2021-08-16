@@ -6,11 +6,14 @@ import { XIcon } from '@heroicons/react/outline';
 import {useStateValue} from "../../Provider/StateProvider";
 import Image from "next/image";
 import {Logo} from "../../assets/assetExports";
+import {useRouter} from "next/router";
 
 const SideBar = (props) => {
 
     const { handleOpenDrawer } = props;
     const [{isDrawerOpen}] = useStateValue();
+
+    const router = useRouter();
 
     return (
         <>
@@ -55,7 +58,7 @@ const SideBar = (props) => {
                                         leave="ease-in-out duration-500"
                                         leaveFrom="opacity-100"
                                         leaveTo="opacity-0" >
-                                        <div className="absolute p-4 rounded-bl-full rounded-tl-full top-0 -left-4 -ml-8 pt-4 pr-2 flex sm:-ml-10 sm:pr-4 bg-blue-500 mt-4">
+                                        <div className="absolute p-4 rounded-bl-full rounded-tl-full top-0 -left-4 -ml-8 pt-4 pr-2 flex sm:-ml-10 sm:pr-4 bg-brand mt-4">
                                             <button className="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-transparent focus:ring-transparent"
                                                     onClick={handleOpenDrawer}>
                                                 <span className="sr-only">Close panel</span>
@@ -63,36 +66,36 @@ const SideBar = (props) => {
                                             </button>
                                         </div>
                                     </Transition.Child>
-                                    <div className="h-full flex flex-col py-6 bg-white dark:bg-gray-900 shadow-xl overflow-y-scroll">
-                                        <div className="p-4 sm:px-6 cursor-pointer bg-white dark:bg-gray-900" onMouseDown={handleOpenDrawer}>
-                                            <Dialog.Title className="text-lg bg-white dark:bg-gray-900 text-gray-900 uppercase font-extrabold tracking-wider">
-                                                <div className="flex flex-row items-center justify-between px-12">
+                                    <div className="h-full w-full flex flex-col bg-white dark:bg-gray-900 shadow-xl overflow-y-scroll">
+                                        <div className="p-4 cursor-pointer bg-white dark:bg-gray-900" onMouseDown={handleOpenDrawer}>
+                                            <Dialog.Title className="text-lg bg-white dark:bg-gray-900">
+                                                <div className="flex w-60 flex-row items-center justify-between px-4">
                                                     <div>
                                                         <Link href="/">
                                                             <a>
-                                                                <Image src={Logo} height={50} width={50} alt="ghana pre order"/>
+                                                                <Image src={Logo} height={80} width={80} alt="ghana pre order"/>
                                                             </a>
                                                         </Link>
                                                     </div>
                                                     <div>
-                                                        <h1 className="text-brand-deep">Profile</h1>
+                                                        <h1 className="text-brand-deep">{" "}</h1>
                                                     </div>
                                                 </div>
                                             </Dialog.Title>
                                         </div>
-                                        <div className="bg-white dark:bg-gray-900 mt-2 relative flex-1 px-4 sm:px-6">
+                                        <div className="relative flex-1 px-6">
                                             {/* panel content */}
-                                            <div className=" bg-white dark:bg-gray-900 absolute inset-0 px-4 sm:px-6">
+                                            <div className="bg-white dark:bg-gray-900 absolute inset-0 px-2">
                                                 <div className="w-full max-w-md my-2 bg-white dark:bg-gray-900">
                                                     <ul className="flex flex-col items-center justify-between">
-                                                        <li className="text-gray-700 hover:text-gray-50 w-full mb-2 font-bold hover:bg-gray-500 p-4 cursor-pointer">
-                                                            <Link href="auth">
-                                                                <a>Log In</a>
+                                                        <li onClick={() => router.push('/auth')} className="text-gray-700 hover:text-gray-50 w-full mb-2 font-bold hover:bg-brand-deep p-4 cursor-pointer">
+                                                            <Link href="/auth">
+                                                                <a className="uppercase">Log In</a>
                                                             </Link>
                                                         </li>
-                                                        <li className="text-gray-700 hover:text-gray-50 w-full mb-2 font-bold hover:bg-gray-500 p-4 cursor-pointer">
+                                                        <li onClick={() => router.push('/auth/signup')} className="text-gray-700 hover:text-gray-50 w-full mb-2 font-bold hover:bg-brand-deep p-4 cursor-pointer">
                                                             <Link href="auth/signup">
-                                                                <a>Sign Up</a>
+                                                                <a className="uppercase">Sign Up</a>
                                                             </Link>
                                                         </li>
                                                     </ul>

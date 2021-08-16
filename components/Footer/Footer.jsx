@@ -55,19 +55,12 @@ const Footer = (props) => {
                         </div>
 
                         <div className="mt-6 lg:mt-0 lg:flex-1">
-                            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+                            <div className="grid grid-cols-3 gap-4 md:grid-cols-3">
                                 <div>
                                     <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-gray-200 dark:hover:text-gray-300">About</h3>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200 dark:text-gray-400 hover:underline">Company</a>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200 dark:text-gray-400 hover:underline">community</a>
-                                    <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200 dark:text-gray-400 hover:underline">Careers</a>
-                                </div>
-
-                                <div>
-                                    <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-gray-200 dark:hover:text-gray-300">Blog</h3>
-                                    <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">Tec</a>
-                                    <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">Music</a>
-                                    <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">Videos</a>
+                                    <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200 dark:text-gray-400 hover:underline">Services</a>
                                 </div>
 
                                 <div>
