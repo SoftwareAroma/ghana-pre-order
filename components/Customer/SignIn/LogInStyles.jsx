@@ -1,11 +1,12 @@
 import {makeStyles} from "@material-ui/core/styles";
+import {Product1} from '../../../assets/assetExports';
 
-export const SignUpStyles = makeStyles((theme) => ({
+export const SignInStyles = makeStyles((theme) => ({
     root: {
         height: '100vh',
     },
     image: {
-        backgroundImage: 'url(https://source.unsplash.com/random)',
+        backgroundImage: `url(${Product1.src})`,
         backgroundRepeat: 'no-repeat',
         backgroundColor:
             theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -23,10 +24,6 @@ export const SignUpStyles = makeStyles((theme) => ({
         height: "100px",
         margin: theme.spacing(1),
         backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
     },
     submit: {
         margin: theme.spacing(3, 0, 2),

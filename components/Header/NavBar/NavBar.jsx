@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {Badge} from "@material-ui/core";
 import {useStateValue} from "../../../Provider/StateProvider";
 import {SearchBar} from '../../components';
+import {Logo} from "../../../assets/assetExports";
 
 const NavBar = (props) => {
 
@@ -15,8 +17,8 @@ const NavBar = (props) => {
             <div className="flex flex-row justify-between items-center">
                 <div className="hidden md:flex">
                     <Link href="/">
-                        <a className="py-4 cursor-pointer uppercase text-gray-300 text-lg font-bold">
-                            Adepa
+                        <a>
+                            <Image src={Logo} height={50} width={50} alt="ghana pre order"/>
                         </a>
                     </Link>
                 </div>
@@ -67,7 +69,7 @@ const NavBar = (props) => {
                                         </Link>
                                         <Link href="/auth/signup">
                                             <a className="text-white text-center ml-2 dark:text-gray-50 cursor-pointer border border-gray-50 border-opacity-0 px-4 py-2 hover:bg-white hover:text-gray-800 dark:hover:text-gray-800">
-                                                Sign Ip
+                                                Sign Up
                                             </a>
                                         </Link>
                                     </div>
@@ -79,10 +81,12 @@ const NavBar = (props) => {
 
             {/* mobile nav */}
             <div className="flex justify-between items-center md:hidden">
-                <div className="flex">
-                    <h1 className="py-4 cursor-pointer uppercase text-gray-300 text-lg font-bold">
-                        Adepa
-                    </h1>
+                <div className="flex items-center">
+                    <Link href="/">
+                        <a>
+                            <Image src={Logo} alt="ghana pre order"/>
+                        </a>
+                    </Link>
                 </div>
                 <div className="md:hidden block cursor-pointer" onMouseDown={handleOpenDrawer}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-50" viewBox="0 0 20 20" fill="currentColor">

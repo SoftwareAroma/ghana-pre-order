@@ -17,7 +17,7 @@ const Footer = (props) => {
                             <div className="px-6">
                                 <div>
                                     <Link href="/">
-                                        <a href="#" className="text-xl font-bold text-gray-200 dark:text-white hover:text-gray-300 dark:hover:text-gray-300">
+                                        <a className="text-xl font-bold text-gray-200 dark:text-white hover:text-gray-300 dark:hover:text-gray-200">
                                             Adepa Collections
                                         </a>
                                     </Link>
@@ -58,28 +58,28 @@ const Footer = (props) => {
                         <div className="mt-6 lg:mt-0 lg:flex-1">
                             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
                                 <div>
-                                    <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-white">About</h3>
+                                    <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-gray-200 dark:hover:text-gray-300">About</h3>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200 dark:text-gray-400 hover:underline">Company</a>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200 dark:text-gray-400 hover:underline">community</a>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200 dark:text-gray-400 hover:underline">Careers</a>
                                 </div>
 
                                 <div>
-                                    <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-white">Blog</h3>
+                                    <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-gray-200 dark:hover:text-gray-300">Blog</h3>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">Tec</a>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">Music</a>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">Videos</a>
                                 </div>
 
                                 <div>
-                                    <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-white">Services</h3>
+                                    <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-gray-200 dark:hover:text-gray-300">Services</h3>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">Mega cloud</a>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">Aperion UI</a>
                                     <a href="#" className="block mt-2 text-sm text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">Material UI</a>
                                 </div>
 
                                 <div>
-                                    <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-white">Contact</h3>
+                                    <h3 className="text-gray-300 hover:text-gray-400 cursor-default font-bold uppercase dark:text-gray-200 dark:hover:text-gray-300">Contact</h3>
                                     <span className="block mt-2 text-sm cursor-pointer text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">+1 526 654 8965</span>
                                     <span className="block mt-2 text-sm cursor-pointer text-gray-400 hover:text-gray-200  dark:text-gray-400 hover:underline">example@email.com</span>
 
@@ -127,7 +127,7 @@ const Footer = (props) => {
 
                         <div className="mb-4 md:mb-0">
                             <p className="cursor-default mt-6 text-xs lg:text-sm leading-none text-gray-500 dark:text-gray-50">
-                                &copy; {new Date().getFullYear()} adepa-collections. All Rights Reserved.
+                                &copy; Ghana Pre Order {new Date().getFullYear()} . All Rights Reserved.
                             </p>
                         </div>
                     </div>

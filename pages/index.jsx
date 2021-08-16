@@ -1,6 +1,7 @@
 import React from "react";
 import Link from 'next/link';
 import {ProductCard} from "../components/components";
+import Video from '../assets/videos/asian-buying-online.mp4';
 
 const Home = () => {
 
@@ -13,39 +14,42 @@ const Home = () => {
             {/* main body content goes here */}
             <main className="w-full h-full">
                 {/* hero section */}
-                <div>
-                    <div className="bg-pink-600 h-96">
-                        <div className="bg-blue-200 h-10"></div>
+                <div className="relative bg-pink-600 h-96 object-contain m-0 p-0">
+                    <video autoPlay muted loop className="object-cover h-96 w-full absolute">
+                        <source src={Video} type="video/mp4"/>
+                    </video>
+                    <div className="absolute bottom-0 bg-white bg-opacity-40 p-4 h-24 w-full">
+                        <h1 className="text-white">Hello world</h1>
                     </div>
                 </div>
 
                 {/* filter the products */}
                 <div className="">
                     {/* filter items list */}
-                    <div className="py-2 pr-2 pl-2 flex justify-between items-center bg-gray-300">
+                    <div className="py-2 pr-2 pl-2 flex justify-between items-center bg-indigo-800">
                         <div>
                             <ul className="grid grid-cols-3 gap-2 md:flex md:flex-row md:items-center">
-                                <li onMouseDown={filterCollections} className="px-4 font-bold hover:text-indigo-700 text-indigo-800 uppercase">
+                                <li onMouseDown={filterCollections} className="px-4 font-bold md:text-xl lg:text-2xl hover:text-gray-300 text-yellow-400 uppercase">
                                     <Link href="">
                                         <a>All</a>
                                     </Link>
                                 </li>
-                                <li onMouseDown={filterCollections} className="px-4 font-bold hover:text-indigo-700 uppercase">
+                                <li onMouseDown={filterCollections} className="px-4 font-bold md:text-xl lg:text-2xl hover:text-gray-300 text-white uppercase">
                                     <Link href="">
                                         <a>Trousers</a>
                                     </Link>
                                 </li>
-                                <li onMouseDown={filterCollections} className="px-4 font-bold hover:text-indigo-700 uppercase">
+                                <li onMouseDown={filterCollections} className="px-4 font-bold md:text-xl lg:text-2xl hover:text-gray-300 text-white uppercase">
                                     <Link href="">
                                         <a>Shirts</a>
                                     </Link>
                                 </li>
-                                <li onMouseDown={filterCollections} className="px-4 font-bold hover:text-indigo-700 uppercase">
+                                <li onMouseDown={filterCollections} className="px-4 font-bold md:text-xl lg:text-2xl hover:text-gray-300 text-white focus:text-yellow-400 uppercase">
                                     <Link href="">
                                         <a>Abaaya</a>
                                     </Link>
                                 </li>
-                                <li onMouseDown={filterCollections} className="px-4 font-bold hover:text-indigo-700 uppercase">
+                                <li onMouseDown={filterCollections} className="px-4 font-bold md:text-xl lg:text-2xl hover:text-gray-300 text-white uppercase">
                                     <Link href="">
                                         <a>Electronics</a>
                                     </Link>

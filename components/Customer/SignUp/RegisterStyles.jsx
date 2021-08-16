@@ -1,11 +1,12 @@
 import {makeStyles} from "@material-ui/core/styles";
+import {Product1} from '../../../assets/assetExports';
 
-export const SignInStyles = makeStyles((theme) => ({
+export const SignUpStyles = makeStyles((theme) => ({
     root: {
         height: '100vh',
     },
     image: {
-        backgroundImage: 'url(https://source.unsplash.com/random)',
+        backgroundImage: `url(${Product1.src})`,
         backgroundRepeat: 'no-repeat',
         backgroundColor:
             theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
