@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import {useStateValue} from "../../Provider/StateProvider";
+import Image from "next/image";
+import {Logo} from "../../assets/assetExports";
 
 const Footer = (props) => {
 
@@ -17,14 +19,11 @@ const Footer = (props) => {
                             <div className="px-6">
                                 <div>
                                     <Link href="/">
-                                        <a className="text-xl font-bold text-gray-200 dark:text-white hover:text-gray-300 dark:hover:text-gray-200">
-                                            Adepa Collections
+                                        <a>
+                                            <Image src={Logo} height={100} width={100} alt="ghana pre order"/>
                                         </a>
                                     </Link>
                                 </div>
-
-                                <p className="max-w-md mt-2 text-gray-400 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nisi! Id.</p>
-
                                 <div className="flex mt-4 -mx-2">
                                     <Link href="/">
                                         <a className="text-gray-500 cursor-pointer">
@@ -119,8 +118,8 @@ const Footer = (props) => {
                     <div className="flex justify-between items-center">
                         <div>
                             <Link href="/">
-                                <a href="#" className="text-xl font-bold text-gray-400 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-                                    Adepa Collection
+                                <a>
+                                    <Image src={Logo} height={50} width={50} alt="ghana pre order"/>
                                 </a>
                             </Link>
                         </div>

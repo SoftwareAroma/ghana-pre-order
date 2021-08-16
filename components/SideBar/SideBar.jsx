@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 import {useStateValue} from "../../Provider/StateProvider";
+import Image from "next/image";
+import {Logo} from "../../assets/assetExports";
 
 const SideBar = (props) => {
 
@@ -64,16 +66,36 @@ const SideBar = (props) => {
                                     <div className="h-full flex flex-col py-6 bg-white dark:bg-gray-900 shadow-xl overflow-y-scroll">
                                         <div className="p-4 sm:px-6 cursor-pointer bg-white dark:bg-gray-900" onMouseDown={handleOpenDrawer}>
                                             <Dialog.Title className="text-lg bg-white dark:bg-gray-900 text-gray-900 uppercase font-extrabold tracking-wider">
-                                                <Link href="#">
-                                                    <a>Adepa Collections</a>
-                                                </Link>
+                                                <div className="flex flex-row items-center justify-between px-12">
+                                                    <div>
+                                                        <Link href="/">
+                                                            <a>
+                                                                <Image src={Logo} height={50} width={50} alt="ghana pre order"/>
+                                                            </a>
+                                                        </Link>
+                                                    </div>
+                                                    <div>
+                                                        <h1 className="text-brand-deep">Profile</h1>
+                                                    </div>
+                                                </div>
                                             </Dialog.Title>
                                         </div>
                                         <div className="bg-white dark:bg-gray-900 mt-2 relative flex-1 px-4 sm:px-6">
                                             {/* panel content */}
                                             <div className=" bg-white dark:bg-gray-900 absolute inset-0 px-4 sm:px-6">
                                                 <div className="w-full max-w-md my-2 bg-white dark:bg-gray-900">
-                                                    hello world
+                                                    <ul className="flex flex-col items-center justify-between">
+                                                        <li className="text-gray-700 hover:text-gray-50 w-full mb-2 font-bold hover:bg-gray-500 p-4 cursor-pointer">
+                                                            <Link href="auth">
+                                                                <a>Log In</a>
+                                                            </Link>
+                                                        </li>
+                                                        <li className="text-gray-700 hover:text-gray-50 w-full mb-2 font-bold hover:bg-gray-500 p-4 cursor-pointer">
+                                                            <Link href="auth/signup">
+                                                                <a>Sign Up</a>
+                                                            </Link>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                             {/* /End panel content */}
