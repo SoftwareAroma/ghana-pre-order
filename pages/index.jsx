@@ -18,8 +18,25 @@ const Home = () => {
                     <video autoPlay muted loop className="object-cover h-96 w-full absolute">
                         <source src={Video} type="video/mp4"/>
                     </video>
-                    <div className="absolute bottom-0 bg-white bg-opacity-40 p-4 h-24 w-full">
-                        <h1 className="text-white">Hello world</h1>
+                    <div className="absolute bottom-0 bg-white bg-opacity-50 p-4 w-full px-5 py-4 mx-auto">
+                        <div className="flex flex-wrap -m-4 text-center">
+                            <div className="p-4 sm:w-1/4 w-1/2">
+                                <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900 font-black">2.7K</h2>
+                                <p className="leading-relaxed md:text-lg text-brand-deep uppercase font-bold">Users</p>
+                            </div>
+                            <div className="p-4 sm:w-1/4 w-1/2">
+                                <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900 font-black">1.8K</h2>
+                                <p className="leading-relaxed md:text-lg text-brand-deep uppercase font-bold">Satisfied Customers</p>
+                            </div>
+                            <div className="p-4 sm:w-1/4 w-1/2">
+                                <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900 font-black">2.5K</h2>
+                                <p className="leading-relaxed md:text-lg text-brand-deep uppercase font-bold">Deliveries</p>
+                            </div>
+                            <div className="p-4 sm:w-1/4 w-1/2">
+                                <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900 font-black">4.0K</h2>
+                                <p className="leading-relaxed md:text-lg text-brand-deep uppercase font-bold">Products</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

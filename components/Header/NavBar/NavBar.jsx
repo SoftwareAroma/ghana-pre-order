@@ -22,7 +22,7 @@ const NavBar = (props) => {
                         </a>
                     </Link>
                 </div>
-                <div className="hidden bg-white md:flex mr-2 ml-2">
+                <div className="hidden md:flex mr-2 ml-2">
                     <SearchBar/>
                 </div>
                 <div className="flex">
@@ -63,12 +63,12 @@ const NavBar = (props) => {
                                     </div> :
                                     <div className="hidden md:flex items-center">
                                         <Link href="/auth">
-                                            <a className="text-white text-center dark:text-gray-50 cursor-pointer border border-gray-50 px-4 py-2 hover:bg-white hover:text-gray-800 dark:hover:text-gray-800">
+                                            <a className="text-gray-800 text-center dark:text-gray-50 cursor-pointer border border-gray-700 dark:border-gray-200 px-4 py-2 hover:bg-black dark:hover:bg-gray-50 hover:text-gray-50 dark:hover:text-gray-900">
                                                 Sign In
                                             </a>
                                         </Link>
                                         <Link href="/auth/signup">
-                                            <a className="text-white text-center ml-2 dark:text-gray-50 cursor-pointer border border-gray-50 border-opacity-0 px-4 py-2 hover:bg-white hover:text-gray-800 dark:hover:text-gray-800">
+                                            <a className="text-gray-800 text-center ml-2 dark:text-gray-50 cursor-pointer border border-gray-700 border-opacity-0 px-4 py-2 hover:bg-black dark:hover:bg-gray-50 hover:text-gray-50 dark:hover:text-gray-900">
                                                 Sign Up
                                             </a>
                                         </Link>

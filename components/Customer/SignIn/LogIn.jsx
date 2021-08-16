@@ -96,7 +96,7 @@ const LogIn = () => {
                             value={values.emailAddress}
                             onChange={handleInputChange}
                             error={errors.emailAddress}
-                            inputIcon={<EmailIcon />}
+                            inputIcon={<EmailIcon color="secondary" />}
                         />
 
                         <InputField
@@ -107,14 +107,14 @@ const LogIn = () => {
                             value={values.password}
                             onChange={handleInputChange}
                             error={errors.password}
-                            inputIcon={<VpnKeyIcon />}
+                            inputIcon={<VpnKeyIcon color="secondary" />}
                             endAdornment={
                                 <InputAdornment position="end">
                                     <IconButton
                                         aria-label="toggle password visibility"
                                         onMouseDown={handlePasswordVisible}
                                     >
-                                        {passwordVisible ? <Visibility /> : <VisibilityOff />}
+                                        {passwordVisible ? <Visibility color="secondary" /> : <VisibilityOff color="secondary" />}
                                     </IconButton>
                                 </InputAdornment>
                             }

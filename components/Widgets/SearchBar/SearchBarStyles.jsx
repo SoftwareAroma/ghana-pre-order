@@ -7,9 +7,10 @@ export const SearchBarStyles = makeStyles((theme) => ({
     search: {
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
+        border: `1px solid ${alpha(theme.palette.common.black, 0.45)}`,
         backgroundColor: alpha(theme.palette.common.white, 0.65),
         '&:hover': {
-            backgroundColor: alpha(theme.palette.common.white, 0.75),
+            backgroundColor: alpha(theme.palette.common.white, 0.85),
         },
         marginLeft: 0,
         width: '100%',
@@ -26,6 +27,7 @@ export const SearchBarStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        color: theme.palette.common.black,
     },
     inputRoot: {
         color: 'inherit',
