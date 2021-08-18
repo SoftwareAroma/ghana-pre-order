@@ -17,9 +17,7 @@
     "react": "17.0.2",
     "react-countup": "^5.2.0",
     "react-dom": "17.0.2",
-    "react-paystack": "^3.0.4"
-  },
-  "devDependencies": {
+    "react-paystack": "^3.0.4",
     "@date-io/date-fns": "1.x",
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.3",
@@ -28,13 +26,15 @@
     "@material-ui/pickers": "^3.3.10",
     "autoprefixer": "^10.3.1",
     "date-fns": "^2.23.0",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.0.1",
     "firebase": "^8.9.0",
     "postcss": "^8.3.6",
     "prop-types": "^15.7.2",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^2.2.7"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.0.1"
   }
 }
