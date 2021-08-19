@@ -3,9 +3,9 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
-import {useStateValue} from "../../Provider/StateProvider";
+import {useStateValue} from "../../../Provider/StateProvider";
 import Image from "next/image";
-import {Logo} from "../../assets/assetExports";
+import {Logo} from "../../../assets/assetExports";
 import {useRouter} from "next/router";
 
 const SideBar = (props) => {

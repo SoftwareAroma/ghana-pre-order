@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import {useStateValue} from "../../Provider/StateProvider";
+import {useStateValue} from "../../../Provider/StateProvider";
 import Image from "next/image";
-import {Logo} from "../../assets/assetExports";
+import {Logo} from "../../../assets/assetExports";
 
 const Footer = (props) => {
 

@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {Badge} from "@material-ui/core";
-import {useStateValue} from "../../../Provider/StateProvider";
-import {SearchBar} from '../../components';
-import {Logo} from "../../../assets/assetExports";
+import {useStateValue} from "../../../../Provider/StateProvider";
+import {SearchBar} from '../../../components';
+import {Logo} from "../../../../assets/assetExports";
 
 const NavBar = (props) => {
 

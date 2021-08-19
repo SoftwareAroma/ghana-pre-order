@@ -1,12 +1,5 @@
-/* header */
-export {default as Header} from './Header/Header';
-/* footer */
-export {default as Footer} from './Footer/Footer';
-/* Side Bar */
-export {default as SideBar} from './SideBar/SideBar';
-
-/* authentication */
-export { LogIn, Register } from './Customer/customer';
+/* user interface */
+export {LogIn,Register,SideBar,Footer,Header} from './ui/ui';
 
 /* widgets */
 export {
@@ -22,6 +15,7 @@ export {
     FormButton,
     DatePicker,
     CopyRight,
+    BackToTop,
 } from './Widgets/widgets';
 
 /* seo head tag */

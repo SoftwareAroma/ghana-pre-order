@@ -9,7 +9,7 @@ module.exports = {
         'brand-deep': "#037c70",
       },
       height: {
-        'video': "34rem",
+        'video': "40rem",
       }
     },
   },

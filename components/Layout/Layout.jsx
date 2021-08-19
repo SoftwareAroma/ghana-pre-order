@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, Header, SideBar } from '../components';
+import {BackToTop, Footer, Header, SideBar} from '../components';
 import {useStateValue} from '../../Provider/StateProvider';
 import actionTypes from '../../Utils/Utils';
 
@@ -42,7 +42,7 @@ const Layout = (props) => {
         <>
             <div className={theme ? "dark" : ""}>
                 {/* main header of the web app */}
-                <div className="sticky top-0 shadow-md transition-all ease-out duration-300 z-50">
+                <div id="back-to-top-anchor" className="sticky top-0 shadow-md transition-all ease-out duration-300 z-50">
                     <Header handleOpenDrawer={handleOpenDrawer}/>
                 </div>
 
@@ -57,6 +57,7 @@ const Layout = (props) => {
                     <div>
                         {children}
                     </div>
+                    <BackToTop />
                 </div>
 
                 {/* footer for all pages */}

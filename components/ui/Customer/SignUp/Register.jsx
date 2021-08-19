@@ -18,7 +18,7 @@ import {
     InputField,
     FormButton,
     CheckBox,
-} from '../../components';
+} from '../../../components';
 
 const initialValues = {
     id: 0,

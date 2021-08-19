@@ -1,26 +1,26 @@
 {
-  "title": "Miastudios inc | Building the future today",
-  "titleTemplate": "%s - Miastudios inc",
-  "description": "Improve your skills in the programming world. learn javascript, flutter, dart, kotlin, java, version control, typescript, ajax and many more. Learn to build real world applications with 100% functionality using tech stacks within like next.js, react.js, vue.js, commerce js, nestjs, adonis js,",
+  "title": "Ghana Pre Order | Where quality matters - order for your product at your own convenience",
+  "titleTemplate": "%s - Ghana Pre Order",
+  "description": "Are you in need of a product from any country but ghana, look no further, we are here to help with mini importations at affordable prices.",
   "openGraph": {
-    "title": "Miastudios inc | Building the future today",
-    "description": "Improve your skills in the programming world. learn javascript, flutter, dart, kotlin, java, version control, typescript, ajax and many more. Learn to build real world applications with 100% functionality using tech stacks within like next.js, react.js, vue.js, commerce js, nestjs, adonis js,",
+    "title": "Ghana Pre Order | Where quality matters - order for your product at your own convenience",
+    "description": "Are you in need of a product from any country but ghana, look no further, we are here to help with mini importations at affordable prices.",
     "type": "website",
     "locale": "en_IE",
     "url": "https://nextjs.org/commerce",
-    "site_name": "miastudios inc",
+    "site_name": "Ghana Pre Order",
     "images": [
       {
         "url": "/card.png",
         "width": 800,
         "height": 600,
-        "alt": "miastudios inc"
+        "alt": "ghana pre order"
       }
     ]
   },
   "twitter": {
-    "handle": "@musahibrahimali",
-    "site": "@miastudiosinc",
+    "handle": "@ghanapreorder",
+    "site": "@ghanapreorder",
     "cardType": "summary_large_image"
   }
 }
